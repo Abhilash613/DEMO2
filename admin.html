@@ -1,0 +1,30 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Admin Dashboard - Add New Food</h1>
+    
+    <form action="add_food.php" method="post">
+        <label for="food_name">Food Name:</label>
+        <input type="text" name="food_name" required><br>
+
+        <label for="food_price">Food Price:</label>
+        <input type="text" name="food_price" required><br>
+
+        <label for="food_category">Food Category:</label>
+        <input type="text" name="food_category" required><br>
+
+        <label for="image_link">Image Link:</label>
+        <input type="text" name="image_link" required><br>
+
+        <input type="submit" name="add_food" value="Add Food">
+    </form>
+    
+    <p><a href="food_list.php">View Food List</a></p>
+</body>
+</html>

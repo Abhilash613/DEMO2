@@ -1,25 +1,47 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Food Delivery</title>
+    <title>food delivery</title>
     <link rel="stylesheet" href="nstyle.css">
 </head>
 <body>
     <div class="wel_image">
         <h1>WELCOME</h1>
     </div>
-    <div class="container">
-        <form action="s.php" method="post">
-            <img src="image/avtar.jpg" alt="Signup Form" class="avatar">
-            <h1>Signup</h1>
-            <input type="text" name="username" placeholder="Username">
-            <input type="email" name="email" placeholder="Email">
-            <input type="text" name="phone" placeholder="Phone Number">
-            <input type="password" name="password" placeholder="Password">
-            <button type="submit">Sign Up</button>
-            <a href="hom2.html">Already have an account? Login</a>
-        </form>
+    
+    <?php
+        // Define a function to generate menu items
+        function generateMenuItem($category, $imagePath, $linkText) {
+            echo "<li>
+                    <img src=\"$imagePath\" alt=\"$category Image\">
+                    <a href=\"#\">$category</a>
+                    <button type=\"button\">Order Now</button>
+                  </li>";
+        }
+    ?>
+
+    <div class="menu">
+        <h2>THE FOOD RESTO</h2>
+        <ul>
+            <?php
+                generateMenuItem("APPETIZER", "image/appetizer.jpg", "APPETIZER");
+                generateMenuItem("MAIN DISHES", "image/main_dish.jpg", "MAIN DISHES");
+                generateMenuItem("DESSERTS", "image/dessert.jpg", "DESSERTS");
+                generateMenuItem("DRINKS", "image/drinks.jpg", "DRINKS");
+            ?>
+        </ul>
+    </div>
+
+    <div class="menu">
+        <h2>ANOTHER MENU</h2>
+        <ul>
+            <?php
+                generateMenuItem("APPETIZER", "image/appetizer.jpg", "APPETIZER");
+                generateMenuItem("MAIN DISHES", "image/main_dish.jpg", "MAIN DISHES");
+                generateMenuItem("DESSERTS", "image/dessert.jpg", "DESSERTS");
+                generateMenuItem("DRINKS", "image/drinks.jpg", "DRINKS");
+            ?>
+        </ul>
     </div>
 </body>
 </html>

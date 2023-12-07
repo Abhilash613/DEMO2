@@ -142,3 +142,7 @@ button:hover {
 
 
 /* Add more styles as needed */
+.cart{
+    background-color: #ccc;
+    font-family: 'Courier New', Courier, monospace;
+}
